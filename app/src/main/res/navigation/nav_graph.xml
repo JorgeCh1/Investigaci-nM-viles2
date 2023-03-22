@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/autenticarLoginFragment">
+    <fragment
+        android:id="@+id/autenticarLoginFragment"
+        android:name="uca.jorch.investigacinmoviles2.AutenticarLoginFragment"
+        android:label="AutenticarLoginFragment" >
+        <action
+            android:id="@+id/AutenticarLogin"
+            app:destination="@id/loginSQLFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/ejemploJSONFragment"
+        android:name="uca.jorch.investigacinmoviles2.EjemploJSONFragment"
+        android:label="EjemploJSONFragment" />
+    <fragment
+        android:id="@+id/ejemploXMLFragment2"
+        android:name="uca.jorch.investigacinmoviles2.EjemploXMLFragment"
+        android:label="EjemploXMLFragment" />
+    <fragment
+        android:id="@+id/loginSQLFragment2"
+        android:name="uca.jorch.investigacinmoviles2.LoginSQLFragment"
+        android:label="login_sql"
+        tools:layout="@layout/login_sql" >
+        <action
+            android:id="@+id/LoginSql"
+            app:destination="@id/menuFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment2"
+        android:name="uca.jorch.investigacinmoviles2.MenuFragment"
+        android:label="menu_opciones"
+        tools:layout="@layout/menu_opciones" >
+        <action
+            android:id="@+id/EjemploJSON"
+            app:destination="@id/ejemploJSONFragment" />
+        <action
+            android:id="@+id/EjemploXML"
+            app:destination="@id/ejemploXMLFragment2" />
+    </fragment>
+</navigation>
