@@ -6,20 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".LoginFirebaseFragment">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:layout_marginHorizontal="140dp"
-        tools:srcCompat="@tools:sample/avatars" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
         android:orientation="vertical"
         android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="134dp"
+            android:layout_marginHorizontal="140dp"
+            android:layout_marginTop="56dp"
+            tools:src="@drawable/user2" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"

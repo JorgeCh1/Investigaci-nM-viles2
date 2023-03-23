@@ -39,7 +39,6 @@ class LoginFirebaseFragment : Fragment() {
             println("$user + $pw")
 
             if (user.isNotEmpty() && pw.isNotEmpty()) {
-                println("tan llenos")
                 FirebaseAuth.getInstance().signInWithEmailAndPassword(user, pw).addOnCompleteListener{
                     if (it.isSuccessful) {
                         Toast.makeText(context,"Login correcto...", Toast.LENGTH_LONG).show()

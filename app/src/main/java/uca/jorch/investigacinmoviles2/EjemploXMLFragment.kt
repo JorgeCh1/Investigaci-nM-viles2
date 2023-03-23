@@ -13,8 +13,8 @@ import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.android.volley.Request
 import uca.jorch.investigacinmoviles2.databinding.EjemploXmlBinding
-import uca.jorch.investigacinxml.Employee
-import uca.jorch.investigacinxml.XmlPullParserHandler
+import uca.jorch.investigacinmoviles2.Employee
+import uca.jorch.investigacinmoviles2.XmlPullParserHandler
 import java.io.IOException
 
 
@@ -41,16 +41,18 @@ class EjemploXMLFragment : Fragment() {
         var employees: List<Employee>? = null
         try {
             val parser = XmlPullParserHandler()
-            val istream = assets.open("employees.xml")
+            val istream = resources.assets.open("employees.xml")
             employees = parser.parse(istream)
 
-            val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, employees)
+            val adapter =
+                context?.let { ArrayAdapter(it, android.R.layout.simple_list_item_1, employees) }
             listView.adapter = adapter
 
         } catch (e: IOException) {
             e.printStackTrace()
         }
     }
+
 }
 
 

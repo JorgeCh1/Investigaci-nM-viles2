@@ -20,11 +20,6 @@
         android:label="ejemplo_json"
         tools:layout="@layout/ejemplo_json" />
     <fragment
-        android:id="@+id/ejemploXMLFragment"
-        android:name="uca.jorch.investigacinmoviles2.EjemploXMLFragment"
-        android:label="ejemplo_xml"
-        tools:layout="@layout/ejemplo_xml" />
-    <fragment
         android:id="@+id/menuFragment3"
         android:name="uca.jorch.investigacinmoviles2.MenuFragment"
         android:label="menu_opciones"
@@ -32,9 +27,6 @@
         <action
             android:id="@+id/Menu_JSON"
             app:destination="@id/ejemploJSONFragment" />
-        <action
-            android:id="@+id/Menu_XML"
-            app:destination="@id/ejemploXMLFragment" />
     </fragment>
     <fragment
         android:id="@+id/autenticarLoginFragment2"

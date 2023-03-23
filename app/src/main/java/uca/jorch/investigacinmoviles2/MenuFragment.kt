@@ -27,9 +27,6 @@ class MenuFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnXML.setOnClickListener(){
-            it.findNavController().navigate(R.id.Menu_XML)
-        }
         binding.btnJSON.setOnClickListener(){
             it.findNavController().navigate(R.id.Menu_JSON)
         }
