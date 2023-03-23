@@ -4,8 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="12dp"
+    android:layout_margin="10dp"
     tools:context=".MenuFragment">
+
+    <TextView
+        android:layout_width="390dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:fontFamily="monospace"
+        android:text="Ejemplo en XML y JSON"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="30sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,17 +23,17 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/btnXML"
-            android:layout_width="220dp"
-            android:layout_height="wrap_content"
-            android:text="Ejemplo XML"
-            android:layout_marginBottom="40dp"/>
-
-        <Button
             android:id="@+id/btnJSON"
             android:layout_width="220dp"
             android:layout_height="wrap_content"
-            android:text="Ejemplo JSON" />
+            android:text="JSON" />
+
+        <Button
+            android:id="@+id/btnXML"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="XML"
+            android:layout_marginBottom="40dp"/>
 
     </LinearLayout>
 

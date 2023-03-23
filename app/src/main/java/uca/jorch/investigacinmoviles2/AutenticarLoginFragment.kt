@@ -12,7 +12,6 @@ import kotlin.concurrent.thread
 
 class AutenticarLoginFragment : Fragment() {
 
-    //el view binding
     private var _binding: AutenticarLoginBinding? = null
     private val binding get() = _binding!!
 
@@ -20,7 +19,6 @@ class AutenticarLoginFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         _binding = AutenticarLoginBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -28,8 +26,8 @@ class AutenticarLoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnSQLLogin.setOnClickListener(){
-            it.findNavController().navigate(R.id.AutenticarLogin)
+        binding.btnFirebaseLogin.setOnClickListener(){
+            it.findNavController().navigate(R.id.Autenticar_Login)
         }
 
     }

@@ -3,42 +3,46 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/autenticarLoginFragment">
+    app:startDestination="@id/autenticarLoginFragment2">
+
     <fragment
-        android:id="@+id/autenticarLoginFragment"
-        android:name="uca.jorch.investigacinmoviles2.AutenticarLoginFragment"
-        android:label="AutenticarLoginFragment" >
+        android:id="@+id/loginFirebaseFragment"
+        android:name="uca.jorch.investigacinmoviles2.LoginFirebaseFragment"
+        android:label="login_firebase"
+        tools:layout="@layout/login_firebase" >
         <action
-            android:id="@+id/AutenticarLogin"
-            app:destination="@id/loginSQLFragment2" />
+            android:id="@+id/Login_Menu"
+            app:destination="@id/menuFragment3" />
     </fragment>
     <fragment
         android:id="@+id/ejemploJSONFragment"
         android:name="uca.jorch.investigacinmoviles2.EjemploJSONFragment"
-        android:label="EjemploJSONFragment" />
+        android:label="ejemplo_json"
+        tools:layout="@layout/ejemplo_json" />
     <fragment
-        android:id="@+id/ejemploXMLFragment2"
+        android:id="@+id/ejemploXMLFragment"
         android:name="uca.jorch.investigacinmoviles2.EjemploXMLFragment"
-        android:label="EjemploXMLFragment" />
+        android:label="ejemplo_xml"
+        tools:layout="@layout/ejemplo_xml" />
     <fragment
-        android:id="@+id/loginSQLFragment2"
-        android:name="uca.jorch.investigacinmoviles2.LoginSQLFragment"
-        android:label="login_sql"
-        tools:layout="@layout/login_sql" >
-        <action
-            android:id="@+id/LoginSql"
-            app:destination="@id/menuFragment2" />
-    </fragment>
-    <fragment
-        android:id="@+id/menuFragment2"
+        android:id="@+id/menuFragment3"
         android:name="uca.jorch.investigacinmoviles2.MenuFragment"
         android:label="menu_opciones"
         tools:layout="@layout/menu_opciones" >
         <action
-            android:id="@+id/EjemploJSON"
+            android:id="@+id/Menu_JSON"
             app:destination="@id/ejemploJSONFragment" />
         <action
-            android:id="@+id/EjemploXML"
-            app:destination="@id/ejemploXMLFragment2" />
+            android:id="@+id/Menu_XML"
+            app:destination="@id/ejemploXMLFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/autenticarLoginFragment2"
+        android:name="uca.jorch.investigacinmoviles2.AutenticarLoginFragment"
+        android:label="autenticar_login"
+        tools:layout="@layout/autenticar_login" >
+        <action
+            android:id="@+id/Autenticar_Login"
+            app:destination="@id/loginFirebaseFragment" />
     </fragment>
 </navigation>

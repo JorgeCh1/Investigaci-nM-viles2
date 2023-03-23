@@ -18,7 +18,6 @@ import java.io.IOException
 class EjemploXMLFragment : Fragment() {
     private var text: String? = null
 
-    //el view binding
     private var _binding: EjemploXmlBinding? = null
     private val binding get() = _binding!!
 
@@ -26,7 +25,6 @@ class EjemploXMLFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         _binding = EjemploXmlBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -35,43 +33,43 @@ class EjemploXMLFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonLoad.setOnClickListener {
-            //Manda a request usando la url ingresada
+
             Toast.makeText(context, "Requesting...", Toast.LENGTH_SHORT).show()
             cargarDatosDesdeUrl(binding.editTextUrl.text.toString())
         }
     }
     private fun cargarDatosDesdeUrl(url: String) {
-        //Crea una una solicitud usando Volley
+
         val queue = Volley.newRequestQueue(context)
         Toast.makeText(context, "Queue Requested...", Toast.LENGTH_SHORT).show()
 
-        //Crea una solicitud GET para la URL proporcionada
+
         val stringRequest = StringRequest(
             Request.Method.GET, url,
-            { response -> //Devuelve la response del url
+            { response ->
                 try {
                     println(response)
                     try {
                         var datos = ""
-                        val factory = XmlPullParserFactory.newInstance()
+                        var factory = XmlPullParserFactory.newInstance()
                         factory.isNamespaceAware = true
-                        val parser = factory.newPullParser()
+                        var parser = factory.newPullParser()
                         parser.setInput(response.reader())
                         var eventType = parser.eventType
                         while (eventType != XmlPullParser.END_DOCUMENT) {
-                            val tagname = parser.name
+                            var tagname = parser.name
                             when (eventType) {
                                 XmlPullParser.TEXT -> text = parser.text
-                                XmlPullParser.END_TAG -> if (tagname.equals("book", ignoreCase = true)) {
-                                    datos += "Libro: \n"
-                                } else if (tagname.equals("title", ignoreCase = true)) {
-                                    datos += "Titulo: $text\n"
-                                } else if (tagname.equals("author", ignoreCase = true)) {
-                                    datos += "Autor: $text\n"
-                                } else if (tagname.equals("year", ignoreCase = true)) {
-                                    datos += "Año: $text\n"
-                                } else if (tagname.equals("price", ignoreCase = true)) {
-                                    datos += "Precio: $text\n\n"
+                                XmlPullParser.END_TAG -> if (tagname.equals("clientId", ignoreCase = true)) {
+                                    datos += "idCliente: \n"
+                                } else if (tagname.equals("ContactDbId", ignoreCase = true)) {
+                                    datos += "idContactoDb: $text\n"
+                                } else if (tagname.equals("ContactId", ignoreCase = true)) {
+                                    datos += "idContacto: $text\n"
+                                } else if (tagname.equals("Errors", ignoreCase = true)) {
+                                    datos += "Errores: $text\n"
+                                } else if (tagname.equals("HasErrors", ignoreCase = true)) {
+                                    datos += "Errores: $text\n\n"
                                 }
                                 else -> {
                                 }
@@ -79,6 +77,7 @@ class EjemploXMLFragment : Fragment() {
                             eventType = parser.next()
                         }
                         binding.textViewData.text = datos
+
 
                     } catch (e: XmlPullParserException) {
                         e.printStackTrace()

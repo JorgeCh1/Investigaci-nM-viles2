@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
+import uca.jorch.investigacinmoviles2.databinding.AutenticarLoginBinding
 import uca.jorch.investigacinmoviles2.databinding.MenuOpcionesBinding
 
 class MenuFragment : Fragment() {
@@ -27,10 +28,10 @@ class MenuFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnXML.setOnClickListener(){
-            it.findNavController().navigate(R.id.EjemploXML)
+            it.findNavController().navigate(R.id.Menu_XML)
         }
         binding.btnJSON.setOnClickListener(){
-            it.findNavController().navigate(R.id.EjemploJSON)
+            it.findNavController().navigate(R.id.Menu_JSON)
         }
     }
 
