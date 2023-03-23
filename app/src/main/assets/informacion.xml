@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<users>
-    <user>
-        <name>Tom</name>
-        <designation>Actor and Producer</designation>
-    </user>
-    <user>
-        <name>Danny</name>
-        <designation>Music Director</designation>
-    </user>
-    <user>
-        <name>Christopher</name>
-        <designation>Writer</designation>
-    </user>
-</users>
+<resources>
+    <users>
+        <user>
+            <name>Sehwag</name>
+            <designation>Vice Captain</designation>
+            <loation>Delhi</loation>
+        </user>
+        <user>
+            <name>Ashwin</name>
+            <designation>Off Spin Bowler</designation>
+            <loation>Chennai</loation>
+        </user>
+        <user>
+            <name>Dhoni</name>
+            <designation>Captain</designation>
+            <loation>Ranchi</loation>
+        </user>
+    </users>
+</resources>
