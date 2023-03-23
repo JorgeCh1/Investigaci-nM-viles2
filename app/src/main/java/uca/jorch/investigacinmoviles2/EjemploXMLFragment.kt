@@ -17,27 +17,23 @@ import org.xmlpull.v1.XmlPullParser
 import org.xmlpull.v1.XmlPullParserException
 import org.xmlpull.v1.XmlPullParserFactory
 import java.io.IOException
-import android.widget.ListAdapter
-import org.w3c.dom.Node
-import org.xml.sax.InputSource
-import org.xml.sax.SAXException
-import java.io.FileInputStream
-import java.io.InputStream
-import java.util.*
-import javax.xml.parsers.DocumentBuilderFactory
-import javax.xml.parsers.ParserConfigurationException
-import org.w3c.dom.Element
-import java.net.URL
-
 
 
 class EjemploXMLFragment : Fragment() {
     private var text: String? = null
 
+    //el view binding
     private var _binding: EjemploXmlBinding? = null
     private val binding get() = _binding!!
 
-
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        _binding = EjemploXmlBinding.inflate(inflater, container, false)
+        return binding.root
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
