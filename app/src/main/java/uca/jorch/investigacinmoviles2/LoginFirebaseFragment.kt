@@ -13,7 +13,6 @@ import uca.jorch.investigacinmoviles2.databinding.LoginFirebaseBinding
 
 class LoginFirebaseFragment : Fragment() {
 
-    //el view binding
     private var _binding: LoginFirebaseBinding? = null
     private val binding get() = _binding!!
 
@@ -41,10 +40,10 @@ class LoginFirebaseFragment : Fragment() {
             if (user.isNotEmpty() && pw.isNotEmpty()) {
                 FirebaseAuth.getInstance().signInWithEmailAndPassword(user, pw).addOnCompleteListener{
                     if (it.isSuccessful) {
-                        Toast.makeText(context,"Login correcto...", Toast.LENGTH_LONG).show()
+                        Toast.makeText(context,"Logeado Correctamente...", Toast.LENGTH_LONG).show()
                         navigateToMenu()
                     } else {
-                        Toast.makeText(context,"Credenciales incorrectas...", Toast.LENGTH_LONG).show()
+                        Toast.makeText(context,"Datos incorrectos...", Toast.LENGTH_LONG).show()
                     }
                 }
             }
