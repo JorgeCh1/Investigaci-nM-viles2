@@ -5,7 +5,13 @@
     android:layout_height="match_parent"
     tools:context=".EjemploXMLFragment">
 
-    <LinearLayout
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+    <!--<LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
@@ -39,7 +45,7 @@
             android:layout_height="wrap_content"
             android:text="Datos aquí" />
 
-    </LinearLayout>
+    </LinearLayout>-->
 
 
 </FrameLayout>
